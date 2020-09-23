@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'rstock_palindrome'
 
 get '/' do
   @title = "Home"
@@ -16,6 +17,6 @@ get '/palindrome' do
 end
 
 post '/check' do
-  @phrase = params["phrase']
+  @phrase = params[:phrase]
   erb :result                 
 end
